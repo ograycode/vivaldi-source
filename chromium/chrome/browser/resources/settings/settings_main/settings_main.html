@@ -1,0 +1,22 @@
+<link rel="import" href="chrome://resources/polymer/v1_0/polymer/polymer.html">
+<link rel="import" href="chrome://md-settings/advanced_page/advanced_page.html">
+<link rel="import" href="chrome://md-settings/basic_page/basic_page.html">
+
+<dom-module id="settings-main">
+  <link rel="import" type="css" href="settings_main.css">
+  <template>
+    <content select="paper-icon-button"></content>
+    <div id="pageContainer">
+      <template is="dom-if" if="[[!showAdvancedPage_]]">
+        <settings-basic-page prefs="{{prefs}}" current-route="{{currentRoute}}">
+        </settings-basic-page>
+      </template>
+      <template is="dom-if" if="[[showAdvancedPage_]]">
+        <settings-advanced-page prefs="{{prefs}}"
+            current-route="{{currentRoute}}">
+        </settings-advanced-page>
+      </template>
+    </div>
+  </template>
+  <script src="settings_main.js"></script>
+</dom-module>

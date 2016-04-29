@@ -1,0 +1,10 @@
+include_rules = [
+  "-build",
+  "-mojo",
+  "-net",
+  "-services",
+  "-testing",
+  "!mojo/message_pump",
+  "+mojo/public",
+  "+mojo/services/network/public",
+]

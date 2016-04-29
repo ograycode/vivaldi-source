@@ -1,0 +1,4 @@
+include_rules = [
+  "-chromeos",
+  "+components/signin/core/account_id",
+]

@@ -1,0 +1,25 @@
+/* Copyright 2013 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ */
+
+html {
+  background-attachment: fixed;
+  background-color: ${colorBackground};
+  background-position: ${backgroundBarDetached};
+  background-repeat: ${backgroundTiling};
+  height: 100%;
+  overflow: auto;
+}
+
+html[hascustombackground='true'] {
+  background-image: url(chrome://theme/IDR_THEME_NTP_BACKGROUND?${themeId});
+}
+
+html[bookmarkbarattached='true'] {
+  background-position: ${backgroundBarAttached};
+}
+
+#attribution-img {
+  content: url(chrome://theme/IDR_THEME_NTP_ATTRIBUTION?${themeId});
+}
